@@ -40,6 +40,7 @@
             app:tabIndicatorColor="#FF090699"
             android:minHeight="?attr/actionBarSize"
             android:theme="@style/ThemeOverlay.AppCompat.Light"
+            app:tabIndicatorAnimationDuration="0"
             tools:targetApi="lollipop"/>
 
     <com.tinyapps.lib.conductorviewpager.ViewControllerViewPager

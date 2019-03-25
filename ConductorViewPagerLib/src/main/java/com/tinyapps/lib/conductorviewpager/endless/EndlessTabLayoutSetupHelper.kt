@@ -14,7 +14,8 @@ class EndlessTabLayoutSetupHelper() {
         viewPager: ViewControllerViewPager,
         tabLayout: TabLayout,
         items: List<T>,
-        viewControllerFactory: ViewControllerPageFactory<T>
+        viewControllerFactory: ViewControllerPageFactory<T>,
+        isSmoothScrollWhenTabClick: Boolean = false
     ) {
         tabChangeListener?.let { listener ->
             tabLayout.removeOnTabSelectedListener(listener)
@@ -44,8 +45,9 @@ class EndlessTabLayoutSetupHelper() {
 
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 if (tab != null) {
-                    viewPager.currentItem =
+                    val endlessTabLayoutPosition =
                         EndlessPagerHelper.getEndlessTabLayoutPosition(items.size, tab.position)
+                    viewPager.setCurrentItem(endlessTabLayoutPosition, isSmoothScrollWhenTabClick)
                 }
             }
         }
