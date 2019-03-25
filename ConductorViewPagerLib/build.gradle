@@ -33,6 +33,7 @@ dependencies {
 //Conductor view controller
     implementation 'com.bluelinelabs:conductor:3.0.0-rc1'
     implementation 'com.bluelinelabs:conductor-support:3.0.0-rc1'
+    implementation 'com.google.android.material:material:1.0.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

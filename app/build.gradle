@@ -4,14 +4,16 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+def version = '1.0.1'
+
 android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.tinyapps.conductorviewpager"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 101
+        versionName version
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -39,3 +41,9 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.2-alpha02'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha02'
 }
+
+
+afterEvaluate {
+    new File("version.txt").text = "${version}"
+}
+
