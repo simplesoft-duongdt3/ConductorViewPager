@@ -31,6 +31,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.2'
     //internal dependencies
     implementation project(':ConductorViewPagerLib')
+    //ConductorViewPager
+    //implementation 'com.github.simplesoft-duongdt3:ConductorViewPager:1.0.1'
     //Conductor view controller
     implementation 'com.bluelinelabs:conductor:3.0.0-rc1'
     implementation 'com.bluelinelabs:conductor-support:3.0.0-rc1'
@@ -41,9 +43,3 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.2-alpha02'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha02'
 }
-
-
-afterEvaluate {
-    new File("version.txt").text = "${version}"
-}
-
