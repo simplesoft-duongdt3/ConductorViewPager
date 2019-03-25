@@ -21,6 +21,7 @@ class DemoViewPagerController : Controller(null) {
     private fun initView(view: View) {
         val pageFactory = createItemFactory()
         val pagerAdapter = ViewControllerPagerAdapter(this, pageFactory = pageFactory)
+        pagerAdapter.notifyDataSetChanged()
         view.view_pager.adapter = pagerAdapter
         view.tab_layout.setupWithViewPager(view.view_pager)
     }

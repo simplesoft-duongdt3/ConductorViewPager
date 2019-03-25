@@ -11,8 +11,12 @@
             android:theme="@style/AppTheme">
         <activity
                 android:name=".DemoViewPagerActivity"
-                android:label="@string/app_name"
+                android:label="ViewPager"
                 android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".DemoEndlessViewPagerActivity"
+                  android:label="EndlessViewPager"
+                  android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
